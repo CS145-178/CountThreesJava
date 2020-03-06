@@ -1,0 +1,17 @@
+<project name="CountThrees">
+
+	<target name="clean">
+		<delete dir="build"/>
+	</target>
+
+	<target name="Count3s">
+		<mkdir dir="build/classes"/>
+		<javac srcdir="." includeantruntime="true" destdir="build/classes"/>
+	</target>
+
+	<target name="runCount3s" depends="clean, Count3s">
+		<java classpath="build/classes" classname="CountThrees" fork="true"></java>
+	</target>
+
+
+</project>
